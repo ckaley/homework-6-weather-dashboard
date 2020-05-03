@@ -33,7 +33,7 @@ $(document).ready(function () {
   //Define weatherForcast query to get weather forcast
   function weatherForcast(cityValue) {
     var queryURL =
-      "http://api.openweathermap.org/data/2.5/weather?q=" +
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
       cityValue +
       "&units=" +
       units +
@@ -93,7 +93,7 @@ $(document).ready(function () {
   //Define getForcast query to get 5 day forcast
   function getForecast(cityValue) {
     var queryURL =
-      "http://api.openweathermap.org/data/2.5/forecast?q=" +
+      "https://api.openweathermap.org/data/2.5/forecast?q=" +
       cityValue +
       "&units=" +
       units +
@@ -149,7 +149,7 @@ $(document).ready(function () {
   //Define getUVIndex query to get UV Index for a particular city by latitude and longitude
   function getUVIndex(latitude, longitude) {
     var queryURL =
-      "http://api.openweathermap.org/data/2.5/uvi?appid=" +
+      "https://api.openweathermap.org/data/2.5/uvi?appid=" +
       apikey +
       "&lat=" +
       latitude +
