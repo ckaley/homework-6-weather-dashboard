@@ -75,7 +75,7 @@ $(document).ready(function () {
       var cardBody = $("<div>").addClass("card-body");
       var img = $("<img>").attr(
         "src",
-        "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png"
+        "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png"
       );
 
       // merge and add to page
@@ -126,7 +126,7 @@ $(document).ready(function () {
 
           var img = $("<img>").attr(
             "src",
-            "http://openweathermap.org/img/w/" +
+            "https://openweathermap.org/img/w/" +
               response.list[i].weather[0].icon +
               ".png"
           );
