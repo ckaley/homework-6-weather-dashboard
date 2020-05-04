@@ -120,9 +120,13 @@ $(document).ready(function () {
           var card = $("<div>").addClass("card bg-primary text-white");
           var body = $("<div>").addClass("card-body p-2");
 
-          var title = $("<h5>")
-            .addClass("card-title")
-            .text(new Date(response.list[i].dt_txt).toLocaleDateString());
+          //Added in a fix to date format for Safari browsers since the return date format is not supported
+          //Needed to replace the dash "-" with the forward "/" slash
+          tempDate = new Date(
+            response.list[i].dt_txt.replace(/-/g, "/")
+          ).toLocaleDateString();
+
+          var title = $("<h5>").addClass("card-title").text(tempDate);
 
           var img = $("<img>").attr(
             "src",
